@@ -19,9 +19,25 @@ public class Program
 					}
 				for (int z = 1; z <= j; z ++) 
 				{
-					if (z == 1 || z == j || j == (i * 2 - 1))
+					if ((z == 1 && j == 1) )
 					{
 						result += "*";
+					}
+					else if ((j == (i * 2 - 1) && (z==j || z == 1)) )
+					{
+						result += ".";
+					}
+					else if (j == (i * 2 - 1))
+					{
+						result += "_";
+					}
+					else if (z == j)
+					{
+						result += "\\";
+					}
+					else if (z == 1 )
+					{
+						result += "/";
 					}
 					else
 					{
